@@ -1,6 +1,6 @@
 package participants;
 
-public class Cat implements Skills{
+class Cat implements Skills{
 
     @Override
     public void jump() {
