@@ -19,11 +19,13 @@ public class Main {
         competitors.add(new Cat("Кот", "Петя", 1500,2));
         competitors.add(new Cat("Кот", "Сеня", 1000,2));
         competitors.add(new Cat("Кот", "Инакентий", 1000,2));
+
         competitors.add(new Human("Человек", "Игорь", 9000,1.5));
         competitors.add(new Human("Человек", "Андрей", 10000,3));
         competitors.add(new Human("Человек", "Евгений", 8000, 5));
         competitors.add(new Human("Человек", "Илья", 1000,2));
         competitors.add(new Human("Человек", "Вадим", 7000,2));
+
         competitors.add(new Droid("Робот" , "Джо", 12000, 6));
         competitors.add(new Droid("Робот" , "Джей", 12000, 6));
         competitors.add(new Droid("Робот" , "Кей", 12000, 6));
@@ -63,6 +65,15 @@ public class Main {
         remainingCompetitors(competitors);
         System.out.println("-------------");
 
+        System.out.println("Уровень 4");
+        ArrayList<Obstacle> obstacles4 = new ArrayList<Obstacle>();
+        obstacles4.add(new Treadmill(20000));
+        obstacles4.add(new Wall(10.0));
+        goGo(competitors, obstacles4);
+        removeCouldNot(competitors);
+        System.out.println("Остались участники:");
+        remainingCompetitors(competitors);
+        System.out.println("-------------");
 
     }
 
